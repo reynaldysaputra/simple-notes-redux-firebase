@@ -2,18 +2,25 @@ import React from 'react';
 import './register.scss';
 import Button from '../../../components/atoms/button';
 import { useDispatch, useSelector } from 'react-redux';
-import { registerUsers } from '../../../config/redux/register/registerActions';
+import { registerClear, registerUsers } from '../../../config/redux/register/registerActions';
+import { useHistory } from 'react-router-dom';
 
 function Register(){
   const {loading} = useSelector(state => state.register);
   const dispatch = useDispatch();
+  const history = useHistory();
 
-  const handleRegister = (event) => {
+  const handleRegister = async (event) => {
     event.preventDefault();
     const {email, password} = event.target.elements;
-    dispatch(registerUsers({email, password}))    
-  }
+    const res = await dispatch(registerUsers({email, password})).catch(err => err);
 
+    if(res) {
+      history.push('/login');
+      dispatch(registerClear());
+    }
+  }
+  
   return(
     <>
       <div className='auth-container'>
