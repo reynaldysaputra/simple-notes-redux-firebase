@@ -3,13 +3,13 @@ import 'firebase/auth';
 import 'firebase/firestore';
 
 var firebaseConfig = {
-  apiKey: "AIzaSyBXMKxjdaPCNiIV4eEIYIcpcEHmWa8Byr4",
-  authDomain: "simple-notes-firebase-7a2ee.firebaseapp.com",
-  projectId: "simple-notes-firebase-7a2ee",
-  storageBucket: "simple-notes-firebase-7a2ee.appspot.com",
-  messagingSenderId: "917839118227",
-  appId: "1:917839118227:web:bd7c5ed8923c683b80b266",
-  measurementId: "G-CZM1VQKBG9"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
