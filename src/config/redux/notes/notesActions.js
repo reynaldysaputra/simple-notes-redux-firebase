@@ -45,11 +45,21 @@ export const getDataLive = () => {
     dispatch(clearNotes());
     db.collection("notes").onSnapshot((querySnapshot) => { 
       querySnapshot.docChanges().forEach((res) => {   //docChanges() untuk mengambil perubahan dan mendapatkan res 1 data saja
-        if(res.type === 'added' || res.type === 'modified') {
+        if(res.type === 'added' || res.type === 'modified' || res.type == 'removed') {
           dispatch(getNotes());
         }
       })
     });
+  }
+}
+
+export const deleteData = (id) => {
+  return () => {
+    db.collection('notes').doc(id).delete()
+      .then(res => {
+        console.log('Data berhasil dihapus');
+        console.log(res);
+      })
   }
 }
 

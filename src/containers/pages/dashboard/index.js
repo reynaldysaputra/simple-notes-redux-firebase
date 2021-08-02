@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addData, getDataLive, updateData } from '../../../config/redux/notes/notesActions';
+import { addData, deleteData, getDataLive, updateData } from '../../../config/redux/notes/notesActions';
 import './dashboard.scss';
 
 function Dashboard(){
@@ -40,6 +40,11 @@ function Dashboard(){
     })
   }
 
+  const deleteNote = (e, id) => {
+    e.stopPropagation();
+    dispatch(deleteData(id));
+  }
+
   useEffect(() => {
     dispatch(getDataLive());
   }, [])
@@ -62,6 +67,7 @@ function Dashboard(){
             <p className="title">{item.data().title}</p>
             <div className="date">{item.data().date}</div>
             <div className="content">{item.data().content}</div>
+            <div className='delete-btn' onClick={(e) => deleteNote(e, item.id)}>x</div>
           </div>
         ))}
       </div>
