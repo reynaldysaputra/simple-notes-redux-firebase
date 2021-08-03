@@ -1,4 +1,4 @@
-import { CLEAR_NOTES, READ_NOTES, READ_NOTES_UPDATE } from "./notesType"
+import { CLEAR_NOTES, READ_NOTES } from "./notesType"
 import {db} from '../../firebase';
 
 export const readNotes = (data) => {

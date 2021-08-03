@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../../config/redux/login/loginActions';
 import { addData, deleteData, getDataLive, updateData } from '../../../config/redux/notes/notesActions';
 import './dashboard.scss';
 
@@ -52,6 +53,7 @@ function Dashboard(){
   return(
     <>
       <div className='container'>
+        <button onClick={() => dispatch(logout())}>Logout</button>
         <div className='input-form'>
           <form onSubmit={handleSavedNotes}>
             <input type="text" placeholder='title' className='input-title' value={state.title} onChange={(e) => onInputChange(e, 'title')}/><br/>

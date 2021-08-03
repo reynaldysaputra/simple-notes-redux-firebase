@@ -1,4 +1,4 @@
-import { GET_USER, LOGIN_CLEAR, LOGIN_ERROR, LOGIN_LOADING, LOGIN_USER } from "./loginType";
+import { GET_USER, LOGIN_CLEAR, LOGIN_ERROR, LOGIN_LOADING, LOGIN_USER, LOGOUT_USER } from "./loginType";
 import firebase from '../../firebase';
 
 export const loginUser = (userLogin) => {
@@ -35,6 +35,13 @@ export const getUser = (userLogin) => {
   }
 }
 
+export const logoutUser = (data) => {
+  return {
+    type: LOGOUT_USER,
+    data
+  }
+}
+
 export const getUsers = () => {
   return (dispatch) => {
     firebase.auth().onAuthStateChanged(data => {
@@ -50,7 +57,7 @@ export const loginUsers = ({email, password}) => {
   return (dispatch) => {
     return new Promise((resolve, reject) => {
       dispatch(loginLoading(true));
-
+      
       firebase.auth().signInWithEmailAndPassword(email.value, password.value)
         .then(response => {
           resolve(true);
@@ -60,5 +67,16 @@ export const loginUsers = ({email, password}) => {
           reject(false);
         }).finally(() => dispatch(loginLoading(false)))
     })
+  }
+}
+
+export const logout = () => {
+  return (dispatch) => {
+    firebase.auth().signOut()
+      .then(res => {
+        console.log('Berhasil Logout!');
+        console.log(res);
+        dispatch(logoutUser(res));
+      })
   }
 }

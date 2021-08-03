@@ -1,4 +1,4 @@
-import { LOGIN_CLEAR, LOGIN_ERROR, LOGIN_LOADING, LOGIN_USER } from "./loginType";
+import { LOGIN_CLEAR, LOGIN_ERROR, LOGIN_LOADING, LOGIN_USER, LOGOUT_USER } from "./loginType";
 
 const initalState = {
   userLogin: null,
@@ -15,7 +15,9 @@ export function loginReducer(state=initalState, action){
     case LOGIN_ERROR: 
       return {...state, error: action.error}
     case LOGIN_CLEAR: 
-      return {user: null, loading: true, error: null}
+      return {userLogin: null, loading: true, error: null}
+    case LOGOUT_USER:
+        return {...state, userLogin: null}
     default: return state
   }
 }
