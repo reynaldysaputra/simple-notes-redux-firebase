@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+## `SIMPLE-NOTES-REDUX-FIREBASE : What project is this?`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The goal of the simple-notes-redux-firebase project is to create small notes on the users who will log in to this application.
 
-## Available Scripts
+In the project you will see login, registration features from firebase and also firestore to keep records on the application.
 
-In the project directory, you can run:
+There's nothing fancy about the app's appearance but I've made the app run according to the diagram.
 
-### `yarn start`
+This project is the goal of my learning to use Redux + Firebase this is the beginning of a project using Firebase.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is created using the key in the .env file, If you want to clone it follow the steps below.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This project uses:
+- REACT JS
+- FIREBASE
+- FIREBASE FIRESTORE
+- FIREBASE Authentication
+- REACT ROUTER
+- REDUX
 
-### `yarn test`
+## `How to Install SIMPLE-NOTES-REDUX-FIREBASE`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Install Node.js 0.10 or later.
+2. Run `yarn install`.
+3. Create your firebase account and take the firebase configuration there.
+4. If you have created a firebase account and retrieved the configuration you can follow this command
+``` bash
+REACT_APP_FIREBASE_API_KEY= {YOUR FIREBASE KEY}
+REACT_APP_FIREBASE_AUTH_DOMAIN= { YOUR AUTH DOMAIN FIREBASE}
+REACT_APP_FIREBASE_PROJECT_ID= {YOUR FIREBASE PROJECT ID}
+REACT_APP_FIREBASE_STORAGE_BUCKET= { YOUR FIREBASE STORAGE BUCKET} REACT_APP_FIREBASE_MESSAGING_SENDER_ID= { YOUR FIREBASE MESSANGING SENDER ID}
+REACT_APP_FIREBASE_APP_ID= {YOUR FIREBASE APP ID}
+REACT_APP_FIREBASE_MEASUREMENT_ID= {YOUR FIREBASE MEASUREMENT ID}
+```
+5. Run project `yarn start`
+6. Done
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## `SIMPLE-NOTES-REDUX-FIREBASE Application Display`
+![Screen Shot 2021-08-20 at 14 28 45](https://user-images.githubusercontent.com/43536639/130198727-fa96b6ef-b6b2-4f90-afae-cfab4fafdeef.png)
+![Screen Shot 2021-08-20 at 14 28 55](https://user-images.githubusercontent.com/43536639/130198779-9420fdbb-c71a-41f9-9311-c7801f7c9f5a.png)
+![Screen Shot 2021-08-20 at 14 29 14](https://user-images.githubusercontent.com/43536639/130198790-6829cb5b-5015-4f8c-841a-5c13047c4c6f.png)ng)
